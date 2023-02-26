@@ -5,9 +5,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch  src/server.js"
+    "dev": "node --watch  src/server.js",
+    "streams": "node streams/importCsv.js"
   },
   "keywords": [],
   "author": "Guilherme Oliveira",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.5"
+  }
 }

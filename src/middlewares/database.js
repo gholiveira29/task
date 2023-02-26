@@ -54,13 +54,4 @@ export class Database {
             this.#persist();
         }
     }
-
-    completed(table, id, data) {
-        const RowIndex = this.#database[table].findIndex(row => row.id === id);
-        if (RowIndex > -1) {
-            const row = this.#database[table][RowIndex];
-            this.#database[table][RowIndex] = { id, ...row, ...data };
-            this.#persist();
-        }
-    }
 }

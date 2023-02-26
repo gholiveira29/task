@@ -90,7 +90,7 @@ export const Routes = [
             if (!task) {
                 return res.writeHead(404).end(JSON.stringify('A tarefa com id informado não existe na base.'));
             }
-            database.completed('tasks', id, {
+            database.update('tasks', id, {
                 completed_at: completedDate,
             });
             return res.writeHead(204).end(JSON.stringify('Tarefa completada com sucesso!!'));
